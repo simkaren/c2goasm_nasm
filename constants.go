@@ -47,7 +47,7 @@ func getSingleNumber(line string) int64 {
 	if len(strings.Split(field, ",")) > 1 {
 		panic(fmt.Sprintf("Unexpected comma found in field: %s", field))
 	}
-	v, err := strconv.ParseInt(field, 10, 64)
+	v, err := strconv.ParseInt(field, 0, 64)
 	if err != nil {
 		panic(fmt.Sprintf("Number parsing error: %v", err))
 	}
