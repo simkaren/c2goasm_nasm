@@ -142,6 +142,7 @@ func writeGoasmBody(sub Subroutine, stack Stack, stackArgs StackArgs, arguments,
 		// https://github.com/vertis/objconv/blob/master/src/disasm2.cpp
 		line = replaceUndefined(line, "xmmword", "oword")
 		line = replaceUndefined(line, "ymmword", "yword")
+		line = replaceUndefined(line, "zmmword", "zword")
 
 		line = fixShiftInstructions(line)
 		line = fixMovabsInstructions(line)
